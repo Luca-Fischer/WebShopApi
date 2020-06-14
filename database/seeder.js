@@ -34,6 +34,7 @@ async function seedBrands() {
 
   const brands = [{
       name: 'Adidas'
+
     },
     {
       name: 'Calvin Klein'
@@ -48,7 +49,7 @@ async function seedBrands() {
     await newBrand.save();
   }
 
-  const a = await Category.find();
+  const a = await Brand.find();
   console.log('categories: ', a);
 }
 
@@ -78,6 +79,7 @@ async function seedProducts() {
   const products = [{
       name: 'Weiß',
       price: 17.5,
+      logo: "https://cms.brnstc.de/product_images/435x596/19/11/100093183311000_0.jpg",
       category: tshirt._id,
       brand: adidas._id
     },
@@ -142,4 +144,5 @@ async function seedProducts() {
 
 seedCategories();
 seedBrands();
-seedProducts();
+// Timeout bei Mac -> wegen der asynchronen Funktion
+setTimeout(seedProducts, 1000);
