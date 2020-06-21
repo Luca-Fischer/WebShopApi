@@ -14,7 +14,7 @@
     "mongoosejs",
     "database relationships"
   ],
-  "author": "Connor Leech",
+  "author": "Luca Fischer & Robin Hoffmann",
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.5",
